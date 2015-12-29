@@ -104,6 +104,12 @@ static NSString * const kSkipButtonText = @"Skip";
     return self;
 }
 
+#pragma mark - Custom setters
+
+- (void)setViewControllers:(NSArray *)viewControllers {
+    _viewControllers = viewControllers;
+    self.pageControl.numberOfPages = _viewControllers.count;
+}
 
 #pragma mark - View life cycle
 
